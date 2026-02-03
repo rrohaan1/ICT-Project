@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page - NIIT Airlines</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      flex: 1;
+      width: 100%;
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #141245;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      color: #141245;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    .input-group input:focus {
+      border-color: #f0c981;
+      outline: none;
+    }
+
+    .forgot-password,
+    .signup-link {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .forgot-password a,
+    .signup-link a {
+      color: #141245;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover,
+    .signup-link a:hover {
+      color: #f0c981;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 10px;
+      background-color: #f0c981;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-sizing: border-box;
+    }
+
+    .btn-submit:hover {
+      background-color: #141245;
+    }
+
+    .btn-submit:active {
+      transform: scale(1.05);
+    }
+
+    .forgot-password {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: #141245;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #f0c981;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+
+    <form action="#" method="POST">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+
+    <div class="signup-link">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 NIIT Airlines. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="faq.html">FAQ</a>
+    </p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIIT Airlines - Booking Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      background-color: #141245;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-image img {
+      width: 120px;
+      height: auto;
+    }
+
+    .header-title {
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .booking-container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .booking-container h1 {
+      text-align: center;
+      color: #141245;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #141245;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .btn-submit:hover {
+      background-color: #f0c981;
+      transform: scale(1.05);
+    }
+
+    .btn-submit:active {
+      transform: scale(1.02);
+    }
+
+    .footer {
+      background-color: #141245;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #f0c981;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <div class="header-image">
+        <img src="images/logo.png" alt="Company Logo">
+      </div>
+      <div class="header-title">NIIT Airlines</div>
+    </div>
+  </div>
+
+  <div class="booking-container">
+    <h1>Book Your Flight</h1>
+    <form action="index.html" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="passport">Passport No (Roll no)</label>
+        <input type="text" id="passport" name="passport" placeholder="Enter your passport no" required>
+      </div>
+      <div class="form-group">
+        <label for="departure">Departure</label>
+        <select id="departure" name="departure" required>
+          <option value="" disabled selected>Select your departure</option>
+          <option value="CyS Lab">CyS Lab (New York)</option>
+          <option value="AI Lab">AI Lab (London)</option>
+          <option value="CS Lab">CS Lab (Dubai)</option>
+          <option value="SE Lab">SE Lab (Tokyo)</option>
+          <option value="Cafe">Cafeteria (Sydney)</option>
+          <option value="Gym">Gym (North Korea)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="arrival">Arrival</label>
+        <select id="arrival" name="arrival" required>
+          <option value="" disabled selected>Select your arrival</option>
+          <option value="CyS Lab">CyS Lab (New York)</option>
+          <option value="AI Lab">AI Lab (London)</option>
+          <option value="CS Lab">CS Lab (Dubai)</option>
+          <option value="SE Lab">SE Lab (Tokyo)</option>
+          <option value="Cafe">Cafeteria (Sydney)</option>
+          <option value="Gym">Gym (North Korea)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Travel Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>      
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" placeholder="Enter any special requests"></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Submit Booking</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 NIIT Airlines. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="faq.html">FAQ</a>
+    </p>
+  </div>
+
+</body>
+</html>
